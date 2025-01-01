@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style= "background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+        <li>Html</li>
+        <li>paython</li>
+        <li>ruby</li>
+    </ul>
+</body>
+<script>
+
+    function addOptilang(langname) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptilang('golang')
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    const newline = document.createElement('li')
+    newline.textContent = "Mojo"
+    secondlang.replaceWith(newline)
+</script>
+</html>
